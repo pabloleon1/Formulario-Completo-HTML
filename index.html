@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario Completo HTML5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap-5.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+  <div class="container mt-5 mb-5">
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white text-center py-4">
+        <h1 class="mb-2">Tarea: Formulario Completo HTML</h1>
+      </div>
+      <div class="card-body p-4">
+        <form action="server.php" method="POST" enctype="multipart/form-data">
+          <div class="card mb-4">
+            <div class="card-header bg-info text-white">
+              <h5 class="mb-0">Datos personales</h5>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="text" class="form-label">Texto:</label>
+                  <input type="text" class="form-control" id="text" name="text" placeholder="Ingresa tu nombre">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="password" class="form-label">Contraseña:</label>
+                  <input type="password" class="form-control" id="password" name="password" placeholder="Tu contraseña">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="email" class="form-label">Correo electrónico:</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="admin@admin.com">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="url" class="form-label">URL:</label>
+                  <input type="url" class="form-control" id="url" name="url" placeholder="https://url.com">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="tel" class="form-label">Teléfono:</label>
+                  <input type="tel" class="form-control" id="tel" name="tel" placeholder="0999999999">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="number" class="form-label">Número:</label>
+                  <input type="number" class="form-control" id="number" name="number" placeholder="123" min="0"
+                    max="999">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="range" class="form-label">Rango: <span id="rangeValue">50</span></label>
+                  <input type="range" class="form-range" id="range" name="range" min="0" max="100" value="50"
+                    oninput="document.getElementById('rangeValue').textContent = this.value">
+                  <div class="progress mt-2">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" id="rangeProgress"></div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="color" class="form-label">Color favorito:</label>
+                  <input type="color" class="form-control form-control-color" id="color" name="color" value="#0d6efd">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <label for="date" class="form-label">Fecha:</label>
+                  <input type="date" class="form-control" id="date" name="date">
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="time" class="form-label">Hora:</label>
+                  <input type="time" class="form-control" id="time" name="time">
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="datetime-local" class="form-label">Fecha y hora:</label>
+                  <input type="datetime-local" class="form-control" id="datetime-local" name="datetime-local">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="month" class="form-label">Mes:</label>
+                  <input type="month" class="form-control" id="month" name="month">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="week" class="form-label">Semana:</label>
+                  <input type="week" class="form-control" id="week" name="week">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="search" class="form-label">Buscar:</label>
+                  <input type="search" class="form-control" id="search" name="search" placeholder="Buscar...">
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="file" class="form-label">Archivo:</label>
+                  <input type="file" class="form-control" id="file" name="file">
+                </div>
+              </div>
+              <input type="hidden" name="hidden" value="valor_oculto">
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Género:</label>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino">
+                        <label class="form-check-label" for="masculino">Masculino</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="genero" id="femenino" value="femenino">
+                        <label class="form-check-label" for="femenino">Femenino</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="form-label">Intereses:</label>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses[]" id="deporte" value="deporte">
+                        <label class="form-check-label" for="deporte">Deporte</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses[]" id="musica" value="musica">
+                        <label class="form-check-label" for="musica">Música</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses[]" id="lectura" value="lectura">
+                        <label class="form-check-label" for="lectura">Lectura</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses[]" id="tecnologia"
+                          value="tecnologia">
+                        <label class="form-check-label" for="tecnologia">Tecnología</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="intereses[]" id="viajes" value="viajes">
+                        <label class="form-check-label" for="viajes">Viajes</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="pais" class="form-label">País:</label>
+                  <select class="form-select" id="pais" name="pais">
+                    <option value="">Seleccione un país...</option>
+                    <option value="mx">Ecuador</option>
+                    <option value="mx">México</option>
+                    <option value="es">España</option>
+                    <option value="ar">Argentina</option>
+                    <option value="co">Colombia</option>
+                    <option value="pe">Perú</option>
+                    <option value="cl">Chile</option>
+                    <option value="br">Brasil</option>
+                    <option value="us">Estados Unidos</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="lenguajes" class="form-label">Lenguajes de programación favoritos:</label>
+                  <select class="form-select" id="lenguajes" name="lenguajes[]" multiple size="4">
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="csharp">C#</option>
+                    <option value="php">PHP</option>
+                    <option value="cpp">C++</option>
+                    <option value="react">React</option>
+                    <option value="angular">Angular</option>
+                    <option value="go">Go</option>
+                  </select>
+                  <small class="form-text text-muted">Mantén presionado Ctrl (Cmd en Mac) para seleccionar múltiples
+                    opciones</small>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="comentarios" class="form-label">Comentarios:</label>
+                <textarea class="form-control" id="comentarios" name="comentarios" rows="4"
+                  placeholder="Escribe tus comentarios aquí..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4">
+            <div class="card-header bg-warning text-dark">
+              <h5 class="mb-0">Botones</h5>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <h6>Botones tipo button:</h6>
+                  <div class="d-grid gap-2 d-md-block">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                    <button type="button" class="btn btn-info"
+                      onclick="alert('¡Hola! Este es el evento de alertar del botón.')">Solo botón</button>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <h6>Botones de descarga:</h6>
+                  <div class="d-grid gap-2 d-md-block">
+                    <button type="button" class="btn btn-outline-primary">Descargar PDF</button>
+                    <button type="button" class="btn btn-outline-success">Exportar Excel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="text-center mt-4 pt-3 border-top">
+          <p class="text-muted mb-2">
+            UNIVERSIDAD DE LAS FUERZAS ARMADAS "ESPE"
+          </p>
+          <div class="row text-center">
+            <div class="col-md-12">
+              <small class="text-success">Realizado por: Pablo Leonardo Defaz</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('range').addEventListener('input', function () {
+      const value = this.value;
+      document.getElementById('rangeValue').textContent = value;
+      document.getElementById('rangeProgress').style.width = value + '%';
+    });
+  </script>
+</body>
+
+</html>
